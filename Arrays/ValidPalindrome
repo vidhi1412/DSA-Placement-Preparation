@@ -1,0 +1,11 @@
+class sol{
+public boolean isPalin(String s){
+return checkPalin(s.toLowerCase(),0,s.length()-1);}
+private boolean checkPalin(String s,int l,int r){
+if(l>=r) return true;
+if(!Character.isLetterOrDigit(s.charAt(l))) return checkPalin(s,l+1,r);
+if(!Character.isLetterOrDigit(s.charAt(r))) return checkPalin(s,l,r-1);
+if(s.charAt(l)!=s.charAt(r)) return false;
+return checkPalin(s, l+1,r-1);
+}
+}
