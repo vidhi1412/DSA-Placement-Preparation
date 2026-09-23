@@ -1,0 +1,10 @@
+class subArray{
+public int sum(int []nums){
+int s=nums[0];
+int ms=s;
+for(int i=1;i<nums.length;i++){
+s=Math.max(nums[i], s+nums[i]);
+ms=Math.max(ms,s);
+}
+return ms;
+}}
